@@ -31,7 +31,7 @@ class LoginSerializer(serializers.Serializer):
 
         def post(self, attrs):
             username = attrs.get('username')
-            password = attrs.get('username')
+            password = attrs.get('password')
 
             user = authenticate(username=username, password=password)
             if not user:
@@ -40,6 +40,3 @@ class LoginSerializer(serializers.Serializer):
 
             attrs['user'] = user
             return attrs
-
-
-  

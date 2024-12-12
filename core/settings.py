@@ -35,7 +35,13 @@ INSTALLED_APPS = [
 #apps
     'apps.users',
     'apps.products',
+    'apps.cart'
 ]
+
+filterset_fields = {
+    'price': ['exact', 'gte', 'lte'],  # Точное значение, больше или равно, меньше или равно
+    'category': ['exact'],
+}
 
 JAZZMIN_SETTINGS = {
     "show_ui_builder": True,
